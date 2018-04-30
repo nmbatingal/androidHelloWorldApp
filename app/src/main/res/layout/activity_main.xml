@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/headline_fragment"
+        android:layout_weight="1"
+        android:name="com.example.nars.helloworldapp.HeadlineFragment">
+    </fragment>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/article_fragment"
+        android:layout_weight="1"
+        android:name="com.example.nars.helloworldapp.ArticleFragment">
+    </fragment>
 
     <EditText
         android:id="@+id/textUserMessage"
@@ -35,4 +53,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textUserMessage" />
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
